@@ -31,8 +31,6 @@
       font-size: 18px;
     }
 
-    /* Suppression du jaune donc plus de .highlight */
-
     .container {
       max-width: 900px;
       margin: auto;
@@ -170,9 +168,7 @@
     }
 
     document.getElementById('openAccountBtn').addEventListener('click', function () {
-      const code = document.getElementById("code").textContent.trim();
-      const url = `https://www.boursorama-banque.com/parrainage/?code=${code}`;
-      window.open(url, '_blank');
+      window.open('https://www.boursorama-banque.com/parrainage/', '_blank');
     });
   </script>
 </body>
