@@ -32,12 +32,13 @@
     }
 
     .highlight {
-      background-color: #0078FF;
-      color: white;
-      padding: 4px 8px;
-      border-radius: 4px;
-      animation: pulse 1.5s infinite;
-      display: inline-block;
+      background-color: transparent; /* suppression du jaune */
+      color: #0078FF; /* bleu Boursorama */
+      padding: 0;
+      border-radius: 0;
+      animation: none;
+      font-weight: 700; /* texte en gras */
+      display: inline;
     }
 
     .container {
@@ -114,12 +115,6 @@
       font-weight: 600;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-
     @keyframes fadeInDown {
       from { transform: translateY(-30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
@@ -189,7 +184,6 @@
   <script>
     function copyCode() {
       const codeElement = document.getElementById("code");
-      // Récupérer le texte sans balise <strong>
       const code = codeElement.textContent.trim();
       navigator.clipboard.writeText(code);
       alert("✅ Code copié : " + code);
@@ -197,7 +191,6 @@
 
     document.getElementById('openAccountBtn').addEventListener('click', function () {
       const code = document.getElementById("code").textContent.trim();
-      // URL officielle Boursorama avec code parrain injecté
       const url = `https://www.boursorama-banque.com/offre-parrainage/?code=${code}`;
       window.open(url, '_blank');
     });
