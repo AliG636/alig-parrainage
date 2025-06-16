@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Parrainage Boursorama – 220€ offerts</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f8fa;
-      color: #333;
+      background: #F4F6F8;
+      color: #0033A0;
     }
 
     header {
-      background: #d60000;
+      background: #0033A0;
       color: white;
       padding: 40px 20px;
       text-align: center;
@@ -32,10 +32,12 @@
     }
 
     .highlight {
-      background-color: yellow;
-      padding: 2px 6px;
+      background-color: #0078FF;
+      color: white;
+      padding: 4px 8px;
       border-radius: 4px;
       animation: pulse 1.5s infinite;
+      display: inline-block;
     }
 
     .container {
@@ -46,32 +48,37 @@
 
     .code-box {
       background: white;
-      border: 2px dashed #d60000;
+      border: 2px dashed #0078FF;
       border-radius: 10px;
       padding: 20px;
       text-align: center;
       margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0, 120, 255, 0.2);
     }
 
     .code {
       font-size: 36px;
-      color: #d60000;
+      color: #0078FF;
       font-weight: bold;
+      letter-spacing: 0.1em;
+      user-select: all;
     }
 
     button {
       margin-top: 15px;
       padding: 12px 20px;
       font-size: 16px;
-      background: #d60000;
+      background: #0033A0;
       color: white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: 700;
     }
 
     button:hover {
-      background: #b40000;
+      background: #005bb5;
     }
 
     .section {
@@ -83,20 +90,28 @@
     }
 
     .section h2 {
-      color: #d60000;
+      color: #0033A0;
       font-size: 24px;
+      margin-bottom: 15px;
     }
 
     ul {
       text-align: left;
       padding-left: 20px;
+      color: #0033A0;
+      font-weight: 500;
+    }
+
+    ul li {
+      margin-bottom: 10px;
     }
 
     footer {
       text-align: center;
       padding: 30px 20px;
-      background: #333;
+      background: #0033A0;
       color: white;
+      font-weight: 600;
     }
 
     @keyframes pulse {
@@ -112,7 +127,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1>🎉 Parrainage Boursorama Banque</h1>
     <p>Profitez de <span class="highlight">jusqu’à 220€ offerts</span> grâce au code ci-dessous :</p>
@@ -121,12 +135,10 @@
   <div class="container">
 
     <div class="code-box">
-      <div class="code" id="code">ALME4491</div>
+      <div class="code" id="code"><strong>ALME4491</strong></div>
       <button onclick="copyCode()">📋 Copier le code</button>
-      <br><br>
-      <a href="https://www.boursorama-banque.com/" target="_blank">
-        <button>🔗 Ouvrir un compte Boursorama</button>
-      </a>
+      <br /><br />
+      <button id="openAccountBtn">🔗 Ouvrir un compte Boursorama</button>
     </div>
 
     <div class="section">
@@ -163,9 +175,9 @@
     <div class="section">
       <h2>❓ Questions fréquentes</h2>
       <ul>
-        <li><strong>Est-ce vraiment gratuit ?</strong><br>➡️ Oui, aucun frais d’ouverture ni obligation d’utilisation !</li>
-        <li><strong>Combien de temps pour recevoir l’argent ?</strong><br>➡️ Les primes sont versées sous 30 jours après validation.</li>
-        <li><strong>Dois-je fermer mon ancienne banque ?</strong><br>➡️ Non, la mobilité bancaire est optionnelle !</li>
+        <li><strong>Est-ce vraiment gratuit ?</strong><br />➡️ Oui, aucun frais d’ouverture ni obligation d’utilisation !</li>
+        <li><strong>Combien de temps pour recevoir l’argent ?</strong><br />➡️ Les primes sont versées sous 30 jours après validation.</li>
+        <li><strong>Dois-je fermer mon ancienne banque ?</strong><br />➡️ Non, la mobilité bancaire est optionnelle !</li>
       </ul>
     </div>
   </div>
@@ -176,10 +188,19 @@
 
   <script>
     function copyCode() {
-      const code = document.getElementById("code").innerText;
+      const codeElement = document.getElementById("code");
+      // Récupérer le texte sans balise <strong>
+      const code = codeElement.textContent.trim();
       navigator.clipboard.writeText(code);
       alert("✅ Code copié : " + code);
     }
+
+    document.getElementById('openAccountBtn').addEventListener('click', function () {
+      const code = document.getElementById("code").textContent.trim();
+      // URL officielle Boursorama avec code parrain injecté
+      const url = `https://www.boursorama-banque.com/offre-parrainage/?code=${code}`;
+      window.open(url, '_blank');
+    });
   </script>
 </body>
 </html>
