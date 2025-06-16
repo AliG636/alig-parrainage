@@ -2,42 +2,183 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Parrainage Boursorama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parrainage Boursorama – 220€ offerts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f8fa;
+      color: #333;
+    }
+
+    header {
+      background: #d60000;
+      color: white;
+      padding: 40px 20px;
       text-align: center;
-      padding: 50px;
+      animation: fadeInDown 1s ease-out;
     }
-    .code {
+
+    header h1 {
       font-size: 32px;
-      font-weight: bold;
-      color: #d60000;
-      margin-top: 20px;
+      margin-bottom: 10px;
     }
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #d60000;
+
+    header p {
+      font-size: 18px;
+    }
+
+    .highlight {
+      background-color: yellow;
+      padding: 2px 6px;
+      border-radius: 4px;
+      animation: pulse 1.5s infinite;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .code-box {
+      background: white;
+      border: 2px dashed #d60000;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .code {
+      font-size: 36px;
+      color: #d60000;
+      font-weight: bold;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background: #d60000;
       color: white;
       border: none;
-      border-radius: 5px;
-      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #b40000;
+    }
+
+    .section {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+    }
+
+    .section h2 {
+      color: #d60000;
+      font-size: 24px;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #333;
+      color: white;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeInDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <h1>🎉 Parrainage Boursorama Banque 🎉</h1>
-  <p>Utilise mon code de parrainage et reçois jusqu’à <strong>220€</strong> !</p>
-  <div class="code" id="code">ALME4491</div>
-  <button class="btn" onclick="copyCode()">Copier le code</button>
+
+  <header>
+    <h1>🎉 Parrainage Boursorama Banque</h1>
+    <p>Profitez de <span class="highlight">jusqu’à 220€ offerts</span> grâce au code ci-dessous :</p>
+  </header>
+
+  <div class="container">
+
+    <div class="code-box">
+      <div class="code" id="code">ALME4491</div>
+      <button onclick="copyCode()">📋 Copier le code</button>
+      <br><br>
+      <a href="https://www.boursorama-banque.com/" target="_blank">
+        <button>🔗 Ouvrir un compte Boursorama</button>
+      </a>
+    </div>
+
+    <div class="section">
+      <h2>💸 Détail des 220€ offerts :</h2>
+      <ul>
+        <li>✅ 100€ offerts pour l’ouverture d’un compte avec ton code</li>
+        <li>✅ 80€ pour la souscription à une carte bancaire gratuite</li>
+        <li>✅ 40€ si tu actives la mobilité bancaire (facultatif)</li>
+      </ul>
+      <p><strong>Aucun frais à payer, tout est 100% en ligne et sans engagement !</strong></p>
+    </div>
+
+    <div class="section">
+      <h2>🚀 Les étapes pour profiter de l'offre</h2>
+      <ul>
+        <li>1️⃣ Clique sur le bouton "Ouvrir un compte"</li>
+        <li>2️⃣ Remplis le formulaire en ligne</li>
+        <li>3️⃣ Entre le code <strong>ALME4491</strong> lors de l’inscription</li>
+        <li>4️⃣ Reçois ta carte gratuite et tes primes directement</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>✅ Pourquoi choisir Boursorama Banque ?</h2>
+      <ul>
+        <li>💳 Carte bancaire gratuite Visa Welcome ou Ultim</li>
+        <li>📱 Application ultra pratique et moderne</li>
+        <li>🧾 Aucun frais de tenue de compte</li>
+        <li>🔒 Sécurité maximale + assistance 24h/24</li>
+        <li>💰 Jusqu’à 220€ dès l’ouverture !</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>❓ Questions fréquentes</h2>
+      <ul>
+        <li><strong>Est-ce vraiment gratuit ?</strong><br>➡️ Oui, aucun frais d’ouverture ni obligation d’utilisation !</li>
+        <li><strong>Combien de temps pour recevoir l’argent ?</strong><br>➡️ Les primes sont versées sous 30 jours après validation.</li>
+        <li><strong>Dois-je fermer mon ancienne banque ?</strong><br>➡️ Non, la mobilité bancaire est optionnelle !</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 AliG – Code parrain Boursorama : <strong>ALME4491</strong>
+  </footer>
 
   <script>
     function copyCode() {
       const code = document.getElementById("code").innerText;
       navigator.clipboard.writeText(code);
-      alert("Code copié : " + code);
+      alert("✅ Code copié : " + code);
     }
   </script>
 </body>
