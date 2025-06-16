@@ -1,59 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parrainage Boursorama - AliG</title>
+  <meta charset="UTF-8">
+  <title>Parrainage Boursorama</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .container {
-      background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      background-color: #f5f5f5;
       text-align: center;
-      max-width: 400px;
-    }
-    h1 {
-      color: #333;
+      padding: 50px;
     }
     .code {
-      font-size: 1.8rem;
+      font-size: 32px;
       font-weight: bold;
-      color: #e6007e;
-      margin: 1rem 0;
+      color: #d60000;
+      margin-top: 20px;
     }
     .btn {
-      background-color: #e6007e;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #d60000;
       color: white;
-      padding: 1rem 1.5rem;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-    .btn:hover {
-      background-color: #c5006d;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Parrainage Boursorama Banque</h1>
-    <p>Utilise mon code de parrainage :</p>
-    <div class="code">ALME4491</div>
-    <a class="btn" href="https://www.boursorama-banque.com/" target="_blank">
-      Ouvrir un compte Boursorama
-    </a>
-  </div>
+  <h1>🎉 Parrainage Boursorama Banque 🎉</h1>
+  <p>Utilise mon code de parrainage et reçois jusqu’à <strong>220€</strong> !</p>
+  <div class="code" id="code">ALME4491</div>
+  <button class="btn" onclick="copyCode()">Copier le code</button>
+
+  <script>
+    function copyCode() {
+      const code = document.getElementById("code").innerText;
+      navigator.clipboard.writeText(code);
+      alert("Code copié : " + code);
+    }
+  </script>
 </body>
 </html>
